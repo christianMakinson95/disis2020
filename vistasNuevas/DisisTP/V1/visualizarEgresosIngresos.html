@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeSoc</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			background-color: #AFBBF2;
+
+		}
+		th{
+			text-align: center;
+		}
+		label{
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-dark bg-dark">
+ 	 <div class="container-fluid">
+    	<div class="navbar-header">
+      		<a class="navbar-brand" href="#">GeSoc</a>
+   		 </div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    </ul>
+    </div>
+	</nav> 
+	<div id="a" class="row">
+		<div class="col-3">
+			<nav class ="navbar navbar-dark bg-dark">
+			<ul class ="nav navbar-nav">
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Bandeja de Mensajes </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Ver Egresos-Ingresos </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Cargar Egresos-Ingresos </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Presupuestos </a>
+			</li>
+			</ul>
+			</nav>
+		</div>
+		<div class="col-9">
+			<div class="row">
+				<div class="col-md-auto">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					  <label class="form-check-label" for="inlineRadio1">Ver Egresos</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+					  <label class="form-check-label" for="inlineRadio2">Ver Ingresos</label>
+					</div>
+			    </div>
+			    <div class="col col-lg-4">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Categoria:</label>
+				      <select class="custom-select">
+					    <option selected>Choose...</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			    <div class="col col-lg-4">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Criterio:</label>
+				      <select class="custom-select">
+					    <option selected>Choose...</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			</div>
+			<div class="row">
+				<div class="container">
+			      <table class="table table-hover">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Fecha Egreso</th>
+					      <th scope="col">Valor Total</th>
+					      <th scope="col">Documento</th>
+					      <th scope="col">Articulos</th>
+					      <th scope="col">Medio de Pago</th>
+					      <th scope="col">Presupuestos Requeridos</th>
+					      <th scope="col">Cantidad de Presupuestos Requeridos</th>
+					      <th scope="col">Revisores</th>
+					      <th scope="col">Ingresos Asociados</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td>Otto</td>
+					      <td>@mdo</td>
+					      <td>
+							  <select class="custom-select">
+							    <option selected>Choose...</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					      <td>Mark</td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Choose...</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+						    </select>
+						  </td>
+					      <td>@mdo</td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Choose...</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Choose...</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>Jacob</td>
+					      <td>Thornton</td>
+					      <td>@fat</td>
+					    </tr>
+					    
+					  </tbody>
+					</table>
+			    </div>
+			</div>
+			<div class="row">
+				<div class="container">
+			      <table class="table">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Descripcion</th>
+					      <th scope="col">Fecha Ingreso</th>
+					      <th scope="col">Monto Total</th>
+					      <th scope="col">Egresos Vinculados</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td>Otto</td>
+					      <td>@mdo</td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Choose...</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>Jacob</td>
+					      <td>Thornton</td>
+					      <td>@fat</td>
+					    </tr>
+					    
+					  </tbody>
+					</table>
+			    </div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

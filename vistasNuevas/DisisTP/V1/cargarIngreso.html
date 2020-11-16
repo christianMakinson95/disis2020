@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeSoc</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		#a{
+			background-color: #AFBBF2;
+			/*D3FFF3 9649CB 7F0799*/
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-dark bg-dark">
+ 	 <div class="container-fluid">
+    	<div class="navbar-header">
+      		<a class="navbar-brand" href="#">GeSoc</a>
+   		 </div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    </ul>
+    </div>
+	</nav> 
+	<div id="a" class="row">
+		<div class="col-3">
+			<nav class ="navbar navbar-dark bg-dark">
+			<ul class ="nav navbar-nav">
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Bandeja de Mensajes </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Ver Egresos-Ingresos </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Cargar Egresos-Ingresos </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Presupuestos </a>
+			</li>
+			</ul>
+			</nav>
+		</div>
+		<div class="col-9"><br>
+			<div class="container">
+			  <form>
+			    <div class="form-group">
+			      <label for="usr">Id Ingreso:</label>
+			      <input type="text" class="form-control" id="usr">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Nombre Ingreso:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			  </form>
+			</div>
+			<div class ="container">
+			<h2>Organizacion</h2>
+		    <form>
+		    	<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+				  <label class="form-check-label" for="inlineRadio1">Base</label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+				  <label class="form-check-label" for="inlineRadio2">Juridica</label>
+				</div>
+			    <div class="form-group">
+			      <label for="usr">Razon Social:</label>
+			      <input type="text" class="form-control" id="usr">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">CUIT:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Direccion Postal:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Codigo IGJ:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			  </form>
+			</div>
+			<div class ="container">
+			<h2>Items</h2>
+		    <form>
+			    <div class="form-group">
+			      <label for="usr">Id:</label>
+			      <input type="text" class="form-control" id="usr">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Producto:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Cantidad:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Importe por Unidad:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Importe total:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			    <button type="submit" class="btn btn-primary">Submit</button>
+			  </form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

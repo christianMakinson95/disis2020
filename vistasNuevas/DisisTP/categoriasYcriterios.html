@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeSoc - Categorias y Criterios</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			background-color: #AFBBF2;
+
+		}
+		th{
+			text-align: center;
+		}
+		td{
+			text-align: center;
+		}
+		label{
+			margin-right: 10px;
+		}
+		.opciones{
+			margin-top: 8%;
+		}
+		.btnQuitarItem{
+			margin-bottom: 1%;
+		}
+		h1 { font-family: Helvetica Neue; font-size: 3em; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin-bottom: 3%; }
+		h2{
+			margin-bottom: 1%;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ 	 <div class="container">
+ 	
+ 	 		<div class="col">
+ 	 			<div class="dropdown navbar-header">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <label>Acciones</label><span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <a class="dropdown-item" href="ingresos.html">Ingresos</a>
+				    <a class="dropdown-item" href="egresos.html">Egresos</a>
+				    <a class="dropdown-item" href="presupuestos.html">Presupuestos</a>
+				    <a class="dropdown-item" href="categoriasYcriterios.html">Categorias/Criterios</a>
+				  </div>
+				</div>
+ 	 		</div>
+ 	 		<div class="col col-lg-2">
+ 	 			<a href="#"> <button type="button" class="btn btn-info"><span class="fas fa-user"></span>Panel Usuario</button></a>
+ 	 		</div>
+ 	 		<div class="col col-lg-2">
+ 	 			<a href="#"> <button type="button" class="btn btn-warning"><span class="fas fa-arrow-alt-circle-right"></span>Cerrar Sesion</button></a>
+ 	 		</div>
+ 	 	
+    </div>
+	</nav>   
+	<div class="container opciones">
+			<h1>Criterios</h1>
+			<div class="row"><!-- Tabla Criterios -->
+
+			    <div class="col-4">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Filtrar por Criterio:</label>
+				      <select class="custom-select">
+					    <option selected>Criterio</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			    <!--Comienzo de Modal creacion Criterio-->
+			    <div class="col">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCriterio">
+					  Crear Criterio
+					</button>
+					<div class="modal fade bd-example-modal-lg" id="modalCriterio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLongTitle">Crear Criterio</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <div class="container">
+							    <form>
+								   
+								  		<div class=row>
+								  			<div class="col">
+								  				<div class="form-group">
+											      <label for="ideg">Id Criterio:</label>
+											      <input type="text" class="form-control" name="idEgreso" id="'idEgreso'">
+											    </div>
+								  			</div>
+								  			<div class="col">
+								  				<div class="form-group">
+											      <label for="nmeg">Nombre Criterio:</label>
+											      <input type="text" class="form-control" name="nombreEgreso" id="nombreEgreso">
+											    </div>
+								  			</div>
+								  			
+								  		</div>
+									
+									<div class ="row">
+									<h2>Asociar a Categorias</h2>
+										<table class="table">
+										  <thead class="thead-dark">
+										    <tr>
+										      <th scope="col">Nombre</th>
+										      <th scope="col">Asociar</th>
+										    </tr>
+										  </thead>
+										  <tbody>
+										    <tr>
+										      
+										      <td>Mark</td>
+										      <td><input type="checkbox" name=""> Asociado</td>
+
+										    </tr>
+										  </tbody>
+										</table>
+									</div>
+
+									<div class ="row">
+									<h2>Asociar a Criterios</h2>
+										<table class="table">
+										  <thead class="thead-dark">
+										    <tr>
+										      <th scope="col">Nombre</th>
+										      <th scope="col">Asociar como Padre</th>
+										      <th scope="col">Asociar como Hijo</th>
+										    </tr>
+										  </thead>
+										  <tbody>
+										    <tr>
+										      
+										      <td>Mark</td>
+										      <td><input type="checkbox" name=""> Padre</td>
+										      <td><input type="checkbox" name=""> Hijo</td>
+										    </tr>
+										  </tbody>
+										</table>
+									</div>
+								
+								<div class="container">
+									<button type="submit" class="btn btn-primary">Crear Criterio</button>
+								</div>
+								</form>
+							</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<!-- fin modal creacion criterio -->
+
+				 <!--Comienzo de Modal asociacion Criterio-->
+			    <div class="col">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAsCRCR">
+					  Asociar Criterio-Criterio
+					</button>
+
+					<div class="modal fade bd-example-modal-lg" id="modalAsCRCR" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLongTitle">Asociar Criterios-Criterios</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <div class="container">
+							    <form>
+							    
+								    <div class="container">
+								  		<div class=row>
+								  			<div class="col">
+								  				<div class="form-group">
+											      <label for="ideg">Criterio a Asociar:</label>
+											      <select class="custom-select">
+												    <option selected>Criterio</option>
+												    <option value="1">One</option>
+												    <option value="2">Two</option>
+												    <option value="3">Three</option>
+												  </select>
+											    </div>
+								  			</div>
+								  		</div>
+								  		<div class ="row">
+										<h2>Asociar a Criterios</h2>
+											<table class="table">
+											  <thead class="thead-dark">
+											    <tr>
+											      <th scope="col">Nombre</th>
+											      <th scope="col">Asociar como Padre</th>
+											      <th scope="col">Asociar como Hijo</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <tr>
+											      
+											      <td>Mark</td>
+											      <td><input type="checkbox" name=""> Padre</td>
+											      <td><input type="checkbox" name=""> Hijo</td>
+											    </tr>
+											  </tbody>
+											</table>
+										</div>
+									</div>
+									
+								
+								<div class="container">
+									<button type="submit" class="btn btn-primary">Asociar Criterio</button>
+								</div>
+								</form>
+							</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<!-- fin modal asociacion criterio-criterio -->
+
+				 <!--Comienzo de Modal asociacion Criterio-Categoria-->
+			    <div class="col">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAsCRCA">
+					  Asociar Criterio-Categoria
+					</button>
+					<div class="modal fade bd-example-modal-lg" id="modalAsCRCA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLongTitle">Asociar Criterios-Categorias</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <div class="container">
+							    <form>
+							    
+								    <div class="container">
+								  		<div class=row>
+								  			<div class="col">
+								  				<div class="form-group">
+											      <label for="ideg">Criterio:</label>
+											      <select class="custom-select">
+												    <option selected>Criterio</option>
+												    <option value="1">One</option>
+												    <option value="2">Two</option>
+												    <option value="3">Three</option>
+												  </select>
+											    </div>
+								  			</div>
+								  			
+								  		</div>
+								  		<div class ="row">
+										<h2>Asociar a Categorias</h2>
+											<table class="table">
+											  <thead class="thead-dark">
+											    <tr>
+											      <th scope="col">Nombre</th>
+											      <th scope="col">Asociar</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <tr>
+											      
+											      <td>Mark</td>
+											      <td><input type="checkbox" name=""> Asociado</td>
+
+											    </tr>
+											  </tbody>
+											</table>
+										</div>
+									</div>
+								<div class="container">
+									<button type="submit" class="btn btn-primary">Asociar Criterio</button>
+								</div>
+								</form>
+							</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<!-- fin modal asociacion criterio-categoria -->
+				<div class="container">
+			      <table class="table">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Nombre</th>
+					      <th scope="col">Categorias Asociadas</th>
+					      <th scope="col">Criterio Padre</th>
+					      <th scope="col">Criterios Hijos</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td><select class="custom-select">
+							    <option selected>Categorias Asociadas</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select></td>
+					      <td><select class="custom-select">
+							    <option selected>Criterio Padre</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select></td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Criterios Hijos</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					    </tr>
+					  </tbody>
+					</table>
+			    </div>
+			</div>
+			<h1>Categorias</h1>
+			<div class="row"><!--tabla categoria -->
+				<div class="col-4">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Filtrar por Categoria:</label>
+				      <select class="custom-select">
+					    <option selected>Categoria</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			    <!--Comienzo de modal para creacion o asociacion de categoria-->
+			    <div class="col">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+					  Crear Categoria
+					</button>
+					<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <div class="container">
+							    <form>
+							    <div id="myOtros">
+								    <div class="container">
+								  		<div class=row>
+								  			<div class="col">
+								  				<div class="form-group">
+											      <label for="ideg">Id Ingreso:</label>
+											      <input type="text" class="form-control" name="idEgreso" id="'idEgreso'">
+											    </div>
+								  			</div>
+								  			<div class="col">
+								  				<div class="form-group">
+											      <label for="nmeg">Nombre Ingreso:</label>
+											      <input type="text" class="form-control" name="nombreEgreso" id="nombreEgreso">
+											    </div>
+								  			</div>
+								  			<div class="col">
+								  				<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker form-group" inline="true">
+								  				  <label for="example">Fecha Ingreso</label>
+												  <input placeholder="Select date" type="date" name="fechaEgreso" id="fechaEgreso" class="form-control">
+												</div>
+								  			</div>
+								  		</div>
+									</div>
+									<div class ="container">
+									<h2>Organizacion</h2>
+										<div class="row">
+											<div class="col">
+												<div class="form-group">
+										    	<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+												  <label class="form-check-label" for="inlineRadio1">Base</label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+												  <label class="form-check-label" for="inlineRadio2">Juridica</label>
+												</div>
+												</div>
+											</div>
+											<div class="col">
+												
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="form-group">
+											      <label for="usr">Razon Social:</label>
+											      <input type="text" class="form-control" id="usr">
+											    </div>
+											</div>
+											<div class="col">
+												<div class="form-group">
+											      <label for="pwd">CUIT:</label>
+											      <input type="text" class="form-control" id="pwd">
+											    </div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="form-group">
+											      <label for="pwd">Direccion Postal:</label>
+											      <input type="text" class="form-control" id="pwd">
+											    </div>
+											</div>
+											<div class="col">
+												<div class="form-group">
+											      <label for="pwd">Codigo IGJ:</label>
+											      <input type="text" class="form-control" id="pwd">
+											    </div>
+											</div>
+										</div> 
+									</div>
+								</div>
+								<div class="container">
+									<button type="submit" class="btn btn-primary">Cargar Ingreso</button>
+								</div>
+								</form>
+							</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<!--Fin creacion o asociacion de Categoria -->
+				<div class="container">
+			      <table class="table">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Nombre</th>
+					      <th scope="col">Criterios Asociados</th>
+					      <th scope="col">Rubro</th>
+					      <th scope="col">Valor Maximo Vinculado</th>
+					      <th scope="col">Valor Minimo Vinculado</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td><select class="custom-select">
+							    <option selected>Criterios Asociados</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select></td>
+					      <td>@mdo</td>
+					      <td>2 </td>
+					      <td>3 </td>
+					    </tr>
+					  </tbody>
+					</table>
+			    </div>
+			</div>
+			
+		
+	</div>
+	<script>
+		
+	</script>
+</body>
+</html>

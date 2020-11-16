@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    <script src="/js/generales.js"></script>
+    <script src="/js/login.js"></script>
+    <title>Login</title>
+  </head>
+<body>
+       <header>
+        <div class="gesocLogo">
+            <img src="/img/logo-gesoc.png" alt="Logo de Gesoc" style="max-width:100%;height:auto;">
+            <img src="/img/tipito.png" id="tipito" style="max-width:100%;height:auto;">
+            <p>Member Login</p>
+        </div>
+    </header>
+
+    <div class="malResultado" id="malResultado">El usuario y/o la contraseña son incorrectas, vuelva a introducirlas</div>
+
+    <div class="formulario" id="formulario">
+        <form action="/login" method="post">
+            <label for="usuario" class = "form-label">Usuario</label><br>
+            <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-input" ><br>
+            <label for="pass" class = "form-label">Contraseña</label><br>
+            <input type="password" name="pass" id="pass" class="form-input"><br>
+            <div class = "recordarme">
+                <input type="checkbox" name="recordarme" id="recordarme" value="recordar">
+                <label for="recordarme">Recordarme</label><br>
+            </div>
+            <button type="submit" name="iniciar_sesion" id="iniciar_sesion">Iniciar Sesion</button>
+        </form>
+    </div>
+  
+  
+
+</body>
+
+</html>

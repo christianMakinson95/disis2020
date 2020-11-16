@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeSoc - Egresos</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			background-color: #AFBBF2;
+
+		}
+		th{
+			text-align: center;
+		}
+		td{
+			text-align: center;
+		}
+
+		label{
+			margin-right: 10px;
+		}
+		.opciones{
+			margin-top: 8%;
+		}
+		.btnQuitarItem{
+			margin-bottom: 1%;
+		}
+		h1 { font-family: Helvetica Neue; font-size: 3em; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin-bottom: 3%; }
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ 	 <div class="container">
+ 	 	
+ 	 		<div class="col">
+ 	 			<div class="dropdown navbar-header">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <label>Acciones</label><span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <a class="dropdown-item" href="ingresos.html">Ingresos</a>
+				    <a class="dropdown-item" href="egresos.html">Egresos</a>
+				    <a class="dropdown-item" href="presupuestos.html">Presupuestos</a>
+				    <a class="dropdown-item" href="categoriasYcriterios.html">Categorias/Criterios</a>
+				  </div>
+				</div>
+ 	 		</div>
+ 	 		<div class="col col-lg-2">
+ 	 			<a href="#"> <button type="button" class="btn btn-info"><span class="fas fa-user"></span>Panel Usuario</button></a>
+ 	 		</div>
+ 	 		<div class="col col-lg-2">
+ 	 			<a href="#"> <button type="button" class="btn btn-warning"><span class="fas fa-arrow-alt-circle-right"></span>Cerrar Sesion</button></a>
+ 	 		</div>
+ 	 
+    </div>
+	</nav> 
+	
+	<div class="container opciones">
+		<h1>Egresos</h1>
+		<div class="container">
+			<div class="row">
+			    <div class="col">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Categoria:</label>
+				      <select class="custom-select">
+					    <option selected>Categoria</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			    <div class="col">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Criterio:</label>
+				      <select class="custom-select">
+					    <option selected>Criterio</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			
+			    <div class="col ">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+				  Cargar Egreso
+				</button>
+				<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-lg" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLongTitle">Carga de Egreso</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <div class="container">
+						  <form>
+						  	<div id="myOtros">
+						  	<div class="container">
+						  		<div class=row>
+						  			<div class="col">
+						  				<div class="form-group">
+									      <label for="ideg">Id Egreso:</label>
+									      <input type="text" class="form-control" name="idEgreso" id="'idEgreso'">
+									    </div>
+						  			</div>
+						  			<div class="col">
+						  				<div class="form-group">
+									      <label for="nmeg">Nombre Egreso:</label>
+									      <input type="text" class="form-control" name="nombreEgreso" id="nombreEgreso">
+									    </div>
+						  			</div>
+						  			<div class="col">
+						  				<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker form-group" inline="true">
+						  				  <label for="example">Fecha Egreso</label>
+										  <input placeholder="Select date" type="date" name="fechaEgreso" id="fechaEgreso" class="form-control">
+										</div>
+						  			</div>
+						  			
+						  		</div>
+							</div>
+
+						    <div class ="container">
+							<h2>Proveedor</h2>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+									      <label for="usr">Nombre:</label>
+									      <input type="text" class="form-control" id="usr">
+									    </div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+									      <label for="pwd">Apellido:</label>
+									      <input type="text" class="form-control" id="pwd">
+									    </div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+									      <label for="pwd">DNI/CUIL/CUIT:</label>
+									      <input type="text" class="form-control" id="pwd">
+									    </div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+									      <label for="pwd">Direccion Postal:</label>
+									      <input type="text" class="form-control" id="pwd">
+									    </div>
+									</div>
+								</div>
+							</div>
+
+							<div class ="container">
+							<h2>Medio de Pago</h2>
+						        <div class="row">
+						        	<div class="col">
+						        		<div class="form-group">
+									      <label for="usr">Tipo:</label>
+									      <input type="text" class="form-control" id="usr">
+									    </div>
+						        	</div>
+						        	<div class="col">
+						        		<div class="form-group">
+									      <label for="pwd">Nombre:</label>
+									      <input type="password" class="form-control" id="pwd">
+									    </div>
+						        	</div>
+						        </div>
+						        <div class="row">
+						        	<div class="col">
+						        		<div class="form-group">
+									      <label for="pwd">Identificador:</label>
+									      <input type="password" class="form-control" id="pwd">
+									    </div>
+						        	</div>
+						        	<div class="col">
+						        		<div class="form-group">
+									      <label for="pwd">Cargar Documento:</label>
+									      <input type="file" class="form-control" id="pwd">
+									    </div>
+						        	</div>
+						        </div> 
+							</div>
+
+							<div class ="container">
+							<h2>Organizacion</h2>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+								    	<div class="form-check form-check-inline">
+										  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										  <label class="form-check-label" for="inlineRadio1">Base</label>
+										</div>
+										<div class="form-check form-check-inline">
+										  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										  <label class="form-check-label" for="inlineRadio2">Juridica</label>
+										</div>
+										</div>
+									</div>
+									<div class="col">
+										
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+									      <label for="usr">Razon Social:</label>
+									      <input type="text" class="form-control" id="usr">
+									    </div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+									      <label for="pwd">CUIT:</label>
+									      <input type="text" class="form-control" id="pwd">
+									    </div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+									      <label for="pwd">Direccion Postal:</label>
+									      <input type="text" class="form-control" id="pwd">
+									    </div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+									      <label for="pwd">Codigo IGJ:</label>
+									      <input type="text" class="form-control" id="pwd">
+									    </div>
+									</div>
+								</div> 
+							</div>
+							</div>
+							<div id="myItems">						
+								<h2>Items</h2>
+								<div id="containterItem" class ="container item">
+									<div id="item">
+										<h5>Item 1</h3>
+										<div class="row">
+											<div class="col">
+												<div class="form-group">
+											      <label for="usr">Id:</label>
+											      <input type="text" class="form-control" id="usr">
+											    </div>
+											</div>
+											<div class="col">
+												<div class="form-group">
+											      <label for="pwd">Producto:</label>
+											      <input type="text" class="form-control" id="pwd">
+											    </div>
+											</div>
+											<div class="col">
+												<div class="form-group">
+											      <label for="pwd">Cantidad:</label>
+											      <input type="number" class="form-control" id="pwd">
+											    </div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="form-group">
+											      <label for="pwd">Importe por Unidad:</label>
+											      <input type="number" class="form-control" id="pwd">
+											    </div>
+											</div>
+											<div class="col">
+												<div class="form-group">
+											      <label for="pwd">Importe total:</label>
+											      <input type="number" class="form-control" id="pwd">
+											    </div>
+											</div>
+											<div class="col">
+												<p>Seleccionar Moneda</p>
+											</div>
+										</div>   
+									</div>  
+								</div>
+							
+							</div><!--fin container myItem -->
+							<div class="container">
+								<button type="button"  id="btnPasarAItems" class="btn btn-primary">Pasar a Items</button>
+								<button type="button"  id="btnVolverDeItems" class="btn btn-primary">Volver de Items</button>
+								<button type="button"  id="btnAgregarItem" class="btn btn-primary">Agregar Item</button>
+								<button type="submit" class="btn btn-primary">Cargar Egreso</button>
+							</div>
+							 
+						  </form>
+						</div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				</div>
+			</div>
+			</div>
+				<div class="container">
+			      <table class="table table-hover">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col">ID</th>
+					      <th scope="col">Fecha Egreso</th>
+					      <th scope="col">Valor Total</th>
+					      <th scope="col">Documento</th>
+					      <th scope="col">Articulos</th>
+					      <th scope="col">Medio de Pago</th>
+					      <th scope="col">Presupuestos Requeridos</th>
+					      <th scope="col">Cantidad de Presupuestos Requeridos</th>
+					      <th scope="col">Revisores</th>
+					      <th scope="col">Ingresos Asociados</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td>Otto</td>
+					      <td>@mdo</td>
+					      <td>
+							  <select class="custom-select">
+							    <option selected>Articulos</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					      <td>Mark</td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Presupuestos Requeridos</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+						    </select>
+						  </td>
+					      <td>@mdo</td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Revisores</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Ingresos Asociados</option>
+							    <option value="1">One</option>
+							    <option value="2">Two</option>
+							    <option value="3">Three</option>
+							  </select>
+						  </td>
+					    </tr>					    
+					  </tbody>
+					</table>
+			    </div>
+	</div>
+	<script>
+		var c=1;
+		$(document).ready(function(){
+			$("#myItems").hide();
+			$("#btnAgregarItem").hide();
+			$("#btnVolverDeItems").hide();
+		});
+		$("#btnAgregarItem").click(function () {
+			//alert("test");
+
+			/*var $appendItem = $('#containterItemHidden').html();
+			$($appendItem).prev('div').prop('id', 'newId');
+		 	$($appendItem).appendTo('#containterItem');*/
+
+			  c += 1;
+			  $('#containterItem').append(
+					'<div id="item'+c+'">'+
+				'<h5>Item '+c+'</h3>'+
+				'<div class="row">'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="usr">Id:</label>'+
+					      '<input type="text" class="form-control" id="usr">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Producto:</label>'+
+					     ' <input type="text" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Cantidad:</label>'+
+					     ' <input type="number" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+				'</div>'+
+				'<div class="row">'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Importe por Unidad:</label>'+
+					      '<input type="number" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Importe total:</label>'+
+					      '<input type="number" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<p>Seleccionar Moneda</p>'+
+					'</div>'+
+				'</div>'+ 
+				'<button type="button" id="btnQuitarItem'+c+'" class="btn btn-primary btnQuitarItem">Quitar Item'+c+'</button>' + 
+			'</div> ');
+			  $(".btnQuitarItem").click(function(){
+					var id = $(this).attr('id');
+					//id=id[id.length()];
+					id = id.split("m");//obtengo el numero ya que esta al final
+					id = id[1];
+					var idAEliminar = "#item"+id;
+					//alert(idAEliminar);
+					$(idAEliminar).remove();
+				});
+			
+		});
+		$('#btnPasarAItems').click(function(){
+			//alert("a");
+			$("#myOtros").hide();
+			$("#btnPasarAItems").hide();
+			$("#myItems").show();
+			$("#btnAgregarItem").show();
+			$("#btnVolverDeItems").show();
+		});
+		
+		$("#btnVolverDeItems").click(function(){
+			
+			$("#myOtros").show();
+			$("#btnPasarAItems").show();
+			$("#myItems").hide();
+			$("#btnVolverDeItems").hide();
+			$("#btnAgregarItem").hide();
+		});
+	</script>
+</body>
+</html>
