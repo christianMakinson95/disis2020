@@ -1,0 +1,1 @@
+web:node src/main/java/server/server.js
