@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="resources/images/favicon_play.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet'>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/items.js"></script>
+    <title>Agregar Items</title>
+</head>
+
+<body>
+    <form id="formulario" name="form" action="/agregar_items/{{id}}" method="post" onsubmit="return validar()">
+        <div class="items">
+            <p><span>Items</span></p>
+            <label for="nombreProducto">Producto</label>
+            <input type="text" name="nombreProducto" id="nombreProducto" class="form-input"><br>
+            <label for="descripcion">Descripcion</label>
+            <input type="text" name="descripcion" id="descripcion" class="form-input"><br>
+            <label for="cantidad">Cantidad</label>
+            <input type="number" name="cantidad" id="cantidad" class="form-input"><br>
+            <label for="precio">Importe por U.</label>
+            <input type="number" name="precio" id="precio" class="form-input" onchange="calcularTotal()" step="0.01"><br>
+            <label for="importeTotal">Importe Total</label>
+            <input type="number" name="importeTotal" class="form-input" id="importeTotal" value="" disabled/><br>
+            <button id="item-submit" type="submit" name="agregarItem">Agregar Item</button>
+        </div>
+    </form>
+
+    <form action="/crear_egreso" method="get">
+    <input type="submit" value="Crear otro egreso" 
+         name="boton-fin" id="frm1_submit" />
+</form>
+
+    <button type=""></button>
+    
+    <table class="table">
+        <thead>
+            <th>Producto</th>
+            <th>Descripcion</th>
+            <th>Cantidad</th>
+            <th>Importe por U.</th>
+        </thead>
+        {{#each articulos}}
+        <tbody>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{descripcion}}</td>
+                <td>{{cantidad}}</td>
+                <td>{{precio}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+
+    
+
+</body>
+</html>

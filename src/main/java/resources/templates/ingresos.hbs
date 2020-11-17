@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeSoc - Ingresos</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			background-color: #AFBBF2;
+
+		}
+		th{
+			text-align: center;
+		}
+		label{
+			margin-right: 10px;
+		}
+		.opciones{
+			margin-top: 8%;
+		}
+		.btnQuitarItem{
+			margin-bottom: 1%;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ 	 <div class="container">
+ 	
+ 	 		<div class="col">
+ 	 			<div class="dropdown navbar-header">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <label>Acciones</label><span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <a class="dropdown-item" href="/ingresos">Ingresos</a>
+				    <a class="dropdown-item" href="/egresos">Egresos</a>
+				    <a class="dropdown-item" href="/presupuestos">Presupuestos</a>
+				  </div>
+				</div>
+ 	 		</div>
+ 	 		<div class="col col-lg-2">
+ 	 			<a href="#"> <button type="button" class="btn btn-info"><span class="fas fa-user"></span>Panel Usuario</button></a>
+ 	 		</div>
+ 	 		<div class="col col-lg-2">
+ 	 			<a href="#"> <button type="button" class="btn btn-warning"><span class="fas fa-arrow-alt-circle-right"></span>Cerrar Sesion</button></a>
+ 	 		</div>
+ 	 	
+    </div>
+	</nav>   
+	<div class="container opciones">
+			<div class="row">
+			    <div class="col">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Categoria:</label>
+				      <select class="custom-select">
+					    <option selected>Choose...</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			    <div class="col">
+			      <div class="input-group mb-3">
+				      <label for="pwd">Criterio:</label>
+				      <select class="custom-select">
+					    <option selected>Choose...</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+				  </div>
+			    </div>
+			    <div class="col">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+					  Cargar Ingreso
+					</button>
+					<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLongTitle">Carga de Ingreso</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <div class="container">
+						  <form action="/ingresos" method="post" id="formulario">
+							    <div id="myOtros">
+								    <div class="container">
+								  		<div class=row>
+								  			<div class="col">
+								  				<div class="form-group">
+											      <label for="nmin">Descripción del Ingreso</label>
+											      <input type="text" class="form-control" name="nombreIngreso" id="nombreIngreso" required>
+											    </div>
+								  			</div>
+								  			<div class="col">
+								  				<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker form-group" inline="true">
+								  				  <label for="example">Fecha del Ingreso</label>
+												  <input placeholder="Select date" type="date" name="fechaIngreso" id="fechaIngreso" class="form-control" required>
+												</div>
+								  			</div>
+                                            <div class="col">
+								  				<div class="form-group">
+											      <label for="impor">Importe Total</label>
+											      <input type="number" class="form-control" name="importeTotal" id="importeTotal" required>
+											    </div>
+								  			</div>
+								  		</div>
+									</div>
+								 <div class="container">
+									<button type="submit" class="btn btn-primary">Cargar Ingreso</button>
+								</div>
+								</form>
+							</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+
+
+				<div class="container">
+			      <table class="table">
+					  <thead class="thead-dark">
+					    <tr>
+					      <th scope="col" style="text-align:left;">Descripcion</th>
+					      <th scope="col" style="text-align:left;">Fecha Ingreso</th>
+					      <th scope="col" style="text-align:left;">Monto Total</th>
+					      <th scope="col" style="text-align:left;">Egresos Vinculados</th>
+					    </tr>
+					    </each>
+					  </thead>
+					  <tbody>
+					  	{{#each opIn}}
+					    <tr>
+					      <td>{{descripcion}}</td>
+					      <td>{{fechaIngreso}}</td>
+					      <td>{{montoTotal}}</td>
+					      <td>
+					      	<select class="custom-select">
+							    <option selected>Seleccionar...</option>
+							    {{#each egresosVinculados}}
+                                	<option value="1">{{descripcion}}</option>
+                                {{/each}}
+							 </select>
+						  </td>
+					    </tr>
+					    {{/each}}
+					  </tbody>
+					</table>
+			    </div>
+
+			
+		
+	</div>
+	<script>
+		
+		var c=1;
+		$(document).ready(function(){
+			$("#myItems").hide();
+			$("#btnAgregarItem").hide();
+			$("#btnVolverDeItems").hide();
+		});
+		$("#btnAgregarItem").click(function () {
+			//alert("test");
+
+			/*var $appendItem = $('#containterItemHidden').html();
+			$($appendItem).prev('div').prop('id', 'newId');
+		 	$($appendItem).appendTo('#containterItem');*/
+
+			  c += 1;
+			  $('#containterItem').append(
+					'<div id="item'+c+'">'+
+				'<h5>Item '+c+'</h3>'+
+				'<div class="row">'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="usr">Id:</label>'+
+					      '<input type="text" class="form-control" id="usr">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Producto:</label>'+
+					     ' <input type="text" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Cantidad:</label>'+
+					     ' <input type="number" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+				'</div>'+
+				'<div class="row">'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Importe por Unidad:</label>'+
+					      '<input type="number" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<div class="form-group">'+
+					      '<label for="pwd">Importe total:</label>'+
+					      '<input type="number" class="form-control" id="pwd">'+
+					    '</div>'+
+					'</div>'+
+					'<div class="col">'+
+						'<p>Seleccionar Moneda</p>'+
+					'</div>'+
+				'</div>'+ 
+				'<button type="button" id="btnQuitarItem'+c+'" class="btn btn-primary btnQuitarItem">Quitar Item'+c+'</button>' + 
+			'</div> ');
+			  $(".btnQuitarItem").click(function(){
+					var id = $(this).attr('id');
+					//id=id[id.length()];
+					id = id.split("m");//obtengo el numero ya que esta al final
+					id = id[1];
+					var idAEliminar = "#item"+id;
+					//alert(idAEliminar);
+					$(idAEliminar).remove();
+				});
+			
+		});
+		$('#btnPasarAItems').click(function(){
+			//alert("a");
+			$("#myOtros").hide();
+			$("#btnPasarAItems").hide();
+			$("#myItems").show();
+			$("#btnAgregarItem").show();
+			$("#btnVolverDeItems").show();
+		});
+		
+		$("#btnVolverDeItems").click(function(){
+			
+			$("#myOtros").show();
+			$("#btnPasarAItems").show();
+			$("#myItems").hide();
+			$("#btnVolverDeItems").hide();
+			$("#btnAgregarItem").hide();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeSoc</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			background-color: #AFBBF2;
+
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-dark bg-dark">
+ 	 <div class="container-fluid">
+    	<div class="navbar-header">
+      		<a class="navbar-brand" href="#">GeSoc</a>
+   		 </div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    </ul>
+    </div>
+	</nav> 
+	<div id="a" class="row">
+		<div class="col-3">
+			<nav class ="navbar navbar-dark bg-dark">
+			<ul class ="nav navbar-nav">
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Bandeja de Mensajes </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Ver Egresos-Ingresos </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Cargar Egresos-Ingresos </a>
+			</li>
+			<li class ="nav-item">
+			<a class ="nav-link" href="#"> Presupuestos </a>
+			</li>
+			</ul>
+			</nav>
+		</div>
+		<div class="col-9">
+			<br>
+			<h3>Asociar Operacion a Categoria</h3>
+			<div class="container">
+			  <form>
+			    <div class="form-group">
+			    	<label for="pwd">Operacion:</label>
+				    <div class="input-group mb-3">
+					  <select class="custom-select" id="inputGroupSelect02">
+					    <option selected>Choose...</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+					  <div class="input-group-append">
+					    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+					  </div>
+					</div>
+				</div>
+			    <div class="form-group">
+			      <label for="pwd">Id Egreso:</label>
+			      <input type="password" class="form-control" id="pwd">
+			    </div>
+			    <div class="form-group">
+				    <div class="input-group mb-3">
+			    	  <label for="pwd">Categoria:</label>
+					  <select class="custom-select" id="inputGroupSelect02">
+					    <option selected>Choose...</option>
+					    <option value="1">One</option>
+					    <option value="2">Two</option>
+					    <option value="3">Three</option>
+					  </select>
+					  <div class="input-group-append">
+					    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+					  </div>
+					</div>
+				</div>
+			    <button type="submit" class="btn btn-primary">Submit</button>
+			  </form>
+			</div>
+			
+		</div>
+	</div>
+	
+</body>
+</html>
